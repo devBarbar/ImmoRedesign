@@ -6,7 +6,10 @@ import Layout from "../components/Layout";
 import Features from "../components/Features";
 import BlogRoll from "../components/BlogRoll";
 import { Widget } from "../components/Widget";
-
+import Einfamilienhaus from "../img/icons/Einfamilienhaus.svg";
+import Mehrfamilienhaus from "../img/icons/mehrFamilienhaus.svg";
+import Wohnung from "../img/icons/wohnung.svg";
+import Grundstück from "../img/icons/grundstueck.svg";
 export const IndexPageTemplate = ({
   image,
   title,
@@ -27,18 +30,32 @@ export const IndexPageTemplate = ({
         backgroundAttachment: `fixed`
       }}
     >
-      <div
-        style={{
-          display: "flex",
-          height: "150px",
-          lineHeight: "1",
-          justifyContent: "space-around",
-          alignItems: "left",
-          flexDirection: "column"
+      <Widget
+        config={{
+          Footer: {
+            Content: {
+              Benefit: [
+                "Wir sammeln keine Daten auf unserer Website",
+                "Ein Familienunternehmen mit Tradition"
+              ]
+            }
+          },
+          Steps: [
+            {
+              Fullscreen: true,
+              type: "property-type",
+              values: {
+                Buttons: [
+                  { text: "Einfamilienhaus", icon: Einfamilienhaus },
+                  { text: "Mehrfamilienhaus", icon: Mehrfamilienhaus },
+                  { text: "Wohnung", icon: Wohnung },
+                  { text: "Grundstück", icon: Grundstück }
+                ]
+              }
+            }
+          ]
         }}
-      >
-        <Widget></Widget>
-      </div>
+      ></Widget>
     </div>
 
     <section className="section section--gradient">
