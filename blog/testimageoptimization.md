@@ -1,5 +1,5 @@
 ---
-path: TestImageOptimization
+path: TestImageOptimization2
 title: TestImageOptimization
 firstPageImage: assets/bergen-enkheim-1.jpg
 einfamilienQM: 1000
